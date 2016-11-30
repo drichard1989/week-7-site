@@ -15,20 +15,41 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-
-
-
-	<div id="animalButtons">
-		
-
+	<!-- This is the row for the header above the buttons -->
+	<div class="headerRow">
+		<h1>Animal Buttons</h1>
+		<hr>
 	</div>
 
+	<!-- This is the row for the buttons to be added into. -->
+	<div id="animalButtons">
+		
+	</div>
+	<hr>
 
-	<form id="animal-form">
-		<label for = "animal-input">Add an animal</label>
-		<input type="text" id="animal-input"> <br>
+	
+		<div class="row">
 
-		<input
-	</form>
+			<div class="col-sm-4"></div>
+
+			<div class="col-sm-4">
+				<div class="animalSearch">
+					<form>
+	  					<div class="form-group">
+	    					<label for="animalSearchText">Animal Search</label>
+	    					<input type="text" class="form-control" id="animalSearchText" aria-describedby="emailHelp" placeholder="Enter Animal">
+	    					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+	  					<button type="submit" class="btn btn-primary" id="addingAnimals">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-sm-4"></div>
+
+		</div>
+		
+
+		<script type="text/javascript" src="assets/javascript/app.js"></script>
+	
 </body>
 </html>
