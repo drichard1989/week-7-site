@@ -70,7 +70,7 @@ $("#addingAnimals").on("click", function() {
 
 
 // This is the event listener for a click on one of the animal buttons that were created.
-$(".animalButton").on("click", function() {
+$(".animalButtonsParent").on("click", ".animalButton", function() {
 
 	// This emptys out the gifs from the previous return to only have 10 gifs at a time in the bay
 	$("#animalGifs").empty();
