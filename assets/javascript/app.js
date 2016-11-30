@@ -30,6 +30,9 @@ $("#addingAnimals").on("click", function() {
 
 // This is the event listener for a click on one of the animal buttons that were created.
 $("#animalButtons").on("click", function() {
+
+	// This emptys out the gifs from the previous return to only have 10 gifs at a time in the bay
+	$("#animalGifs").empty();
 	
 	// This is the API key for Giphy.
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -49,16 +52,31 @@ $("#animalButtons").on("click", function() {
 
 
                 for (var i = 0; i < results.length; i++) {
+                	// This creates a variable named gifDiv that dynamically adds a div, and a class of that div of item
                     var gifDiv = $('<div class="item">')
-
+                	// Adds a rating variable equal to the rating of the objects return.
                     var rating = results[i].rating;
-
+                	// Creates a variable named p that is equal to html text of p and adding the text of Rating: and the rating that is returned from the object.
                     var p = $('<p>').text("Rating: " + rating);
-
+                    // Creates a variable named animalImage that is equal to the image html tag
                     var animalImage = $('<img>');
-                    animalImage.attr('src', results[i].images.fixed_height.url);
+                    // adds an attribute to the animalImage var of "data-state"- "still".
+                    animalImage.attr("data-state", "still");
 
+                    console.log(results)
+
+
+                    // This is what I need to change if I want to have the animated and the still gif's swap back and forth based on click, along with adding an event listener that calls on those types.
+
+                    // Sets the default src of the image of the still image returned from the gif's object 
+                    animalImage.attr('src', results[i].images.fixed_height_still.url);
+                    // Adds an attribute of data-animate equal to the url for the animated gif
+                    animalImage.attr('data-animate', results[i].images.fixed_height.url);
+                    
+
+                    // Appends the rating to the gifDiv container
                     gifDiv.append(p)
+                    // appends the image to the gifDiv container
                     gifDiv.append(animalImage)
 
                     $('#animalGifs').prepend(gifDiv);
