@@ -32,7 +32,7 @@ $("#addingAnimals").on("click", function() {
 $("#animalButtons").on("click", function() {
 	
 	// This is the API key for Giphy.
-	var queryURL = "httsp://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 	// Here I am consoling the URL to make sure it is plugged in correctly. 
 	console.log(queryURL);
 	// Consoling the value of animal to make sure it is being stored correctly from the previous event listener. 
