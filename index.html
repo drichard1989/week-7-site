@@ -10,65 +10,101 @@
 
 	<!-- This is the link for Jquery -->
 	<script
-  src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
+  	src="https://code.jquery.com/jquery-3.1.1.js"
+ 	 integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+ 	crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 	<!-- This is the row for the header above the buttons -->
 	<div class="headerRow">
 		<div class="row">
+
+			<!-- Spacing column. -->
 			<div class="col-sm-4"></div>
+
+			<!-- Column containing the title and a brief description of the applications purpose. -->
 			<div class="col-sm-4">
 				<h1>Animal Buttons</h1>
 				<small>Utilizing the API from Giphy, below you can create an animal button, and when you click on that button, 10 of the most awesome GIFS will appear affiliated with that animal. Enjoy.
 			</div>
+
+			<!-- Spacing column. -->
 			<div class="col-sm-4"></div>
-		</div>
+
+		<!-- Closing .row tag -->
+		</div> 
 		 
-		<hr>
+		 <!-- Line to go across the page -->
+		<hr> 
+
+	<!-- Closing .headerRow tag	 -->
 	</div>
 
-
+	<!-- Row for the buttons -->
 	<div class="row">
+
+		<!-- Spacing column. -->
 		<div class="col-sm-3"></div>
+
+		<!-- Column for all of the buttons, in the center of the page. -->
 		<div class="col-sm-6">
+
+			<!-- Container for the buttons -->
 			<div id="animalButtons">
-		
-			</div>
+			</div>	
+
 		</div>
+
+		<!-- Spacing column -->
 		<div class="col-sm--3"></div>
+
+	<!-- Closing .row column -->
 	</div>
-	<!-- This is the row for the buttons to be added into. -->
 	
+	<!-- Line that goes across the page for style -->
 	<hr>
 
-	
-		<div class="row">
+	<!-- Row for the form field for searching. -->
+	<div class="row">
+		
+		<!-- Spacing column. -->
+		<div class="col-sm-4"></div>
 
-			<div class="col-sm-4"></div>
+		<!-- Column containing the form field for the search. -->
+		<div class="col-sm-4">
 
-			<div class="col-sm-4">
-				<div class="animalSearch">
-					<form>
-	  					<div class="form-group">
-	    					<label for="animalSearchText">Animal Search</label>
-	    					<input type="text" class="form-control" id="animalSearchText" aria-describedby="emailHelp" placeholder="Enter Animal Name Here">
-	    					<small id="emailHelp" class="form-text text-muted">We promise that no animals will be harmed in the creation of this awesome website.</small>
-						</div>
-	  					<button type="submit" class="btn btn-primary" id="addingAnimals">Add Animal Button</button>
-					</form>
-				</div>
+			<!-- Container for form -->
+			<div class="animalSearch">
+
+				<!-- Form Syntax -->
+				<form>
+  					<div class="form-group">
+    					<label for="animalSearchText">Animal Search</label>
+    					<input type="text" class="form-control" id="animalSearchText" aria-describedby="emailHelp" placeholder="Enter Animal Name Here">
+    					<small id="emailHelp" class="form-text text-muted">We promise that no animals will be harmed in the creation of this awesome website.</small>
+					</div>
+  					<button type="submit" class="btn btn-primary" id="addingAnimals">Add Animal Button</button>
+				</form>
+			<!-- Closing tag for .animalSearch	 -->
 			</div>
-			<div class="col-sm-4"></div>
+
+		<!-- Closing tag for .col-sm-4	 -->
 		</div>
 
+		<!-- Spacing column -->
+		<div class="col-sm-4"></div>
 
-		<div class="col-sm-12" id="animalGifs"></div>
+	<!-- Closing tag for .row	 -->
+	</div>
 
-		
+	<!-- Container for the GIF returns. -->
+	<div class="col-sm-12" id="animalGifs"></div>
 
-		<script type="text/javascript" src="assets/javascript/app.js"></script>
+	
+	<!-- Link to the JS file -->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 	
 </body>
 </html>
