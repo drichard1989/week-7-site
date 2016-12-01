@@ -22,7 +22,6 @@ function pageAnimalLoad() {
 
 // This function is called when the submit button to add an animal is clicked and there are characters in the text box.
 function addAnimal() {
-
 		// Clears the #animalButtons container in the HTML document.
 		$("#animalButtons").empty();
 		// Makes the value of animal equal to the text that was inserted in the search box without whitespace.
