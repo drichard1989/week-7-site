@@ -90,7 +90,7 @@ $(".animalButtonsParent").on("click", ".animalButton", function() {
 	$("#animalGifs").empty();
 	
 	var animalSearch = $(this).attr("data-animal");
-	// This is the API key for Giphy.
+	// This is the API key for Giphy, and also sets teh limit of the return to 10, and applies the search word from the user input to return Gifs affiliated with that word. 
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalSearch + "&api_key=dc6zaTOxFJmzC&limit=10";
 	// Here I am consoling the URL to make sure it is plugged in correctly. 
 	console.log(queryURL);
@@ -106,7 +106,7 @@ $(".animalButtonsParent").on("click", ".animalButton", function() {
                 var results = response.data;
 
 
-
+            	// This loops through all of the returns for the API object.
                 for (var i = 0; i < results.length; i++) {
                 	// This creates a variable named gifDiv that dynamically adds a div, and a class of that div of item
                     var gifDiv = $('<div class="item">')
