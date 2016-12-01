@@ -68,6 +68,20 @@ $("#addingAnimals").on("click", function() {
 	return false;
 });
 
+// This event listener turns still gifs into animated gifs, and vice versa
+$(".animalGifsParent").on("click", ".animalGif", function () {
+	var state = $(this).attr("data-state")
+	// This is done by taking the attributes and applying them to the src of the element on the click.
+	if(state === "still") {
+		$(this).attr("src", $(this).data("animate"));
+		$(this).attr("data-state", "animate");
+	}
+	else{
+		$(this).attr("src", $(this).data("still"));
+		$(this).attr("data-state", "still");
+	}
+
+});
 
 // This is the event listener for a click on one of the animal buttons that were created.
 $(".animalButtonsParent").on("click", ".animalButton", function() {
@@ -104,11 +118,13 @@ $(".animalButtonsParent").on("click", ".animalButton", function() {
                     var animalImage = $('<img>');
                     // adds an attribute to the animalImage var of "data-state"- "still".
                     animalImage.attr("data-state", "still");
+                    // Adding a class of animalGif to the gifs that are loaded from the api request
+                    animalImage.addClass("animalGif");
 
                     console.log(results)
 
 
-                    // This is what I need to change if I want to have the animated and the still gif's swap back and forth based on click, along with adding an event listener that calls on those types.
+
 
                     // Sets the default src of the image of the still image returned from the gif's object 
                     animalImage.attr('src', results[i].images.fixed_height_still.url);
